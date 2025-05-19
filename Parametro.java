@@ -1,6 +1,10 @@
 public class Parametro {
-    protected int Parametro = 30000;
-    
+    protected int parametro = 30000;
+
+    public Parametro(int parametro){
+        this.parametro = parametro;
+    }
     public void atualizarParametro(int novoParametro) {
-        Parametro = novoParametro;
+        parametro = novoParametro;
+    }
 }
