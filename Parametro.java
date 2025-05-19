@@ -4,7 +4,7 @@ public class Parametro {
     public Parametro() {
         sementePilula = 0;
     }
-    
+    sdsadsdsa
     public void atualizarParametro(int val) {
         int calc = val/30000;
         if(calc >= 1) {
