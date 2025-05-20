@@ -21,22 +21,22 @@ public class Semente Extends Parametro{
     // }
     
     public void plantarSemente(int val) {
-        if(qt_Convertida >= val) {
+    
             if(es_Semente >= val) {
                 System.out.println(val + "semente(s) plantada.");
-                qt_Convertida -= val;
                 es_Semente -= val;
-                System.out.println(qt_Convertida + "permissoes de semente restante.");
                 System.out.println(es_Semente + "semente(s) do estoque restante.");
             } else {
                 System.out.println("Sementes do estoque insuficiente.");
-                System.out.println(es_Semente + "semente(s) do estoque restante.");
+                int fl_Estoque = val - es_Semente;
+                if((val - es_semente) <= 1){
+                        System.out.println("Tem apenas "+ es_Semente + "deseja plantar essa quantidade mesmo insuficiente ?(S/N)")
+                        
+                        
+                
+                System.out.println( + "A quantidade de semente(s) do estoque faltando é: "+fl_Estoque);
             }
-        }
-        else {
-            System.out.println("Permissao para plantar insuficiente.");
-            System.out.println(qt_Convertida + "permissoes de semente restante.");
-        }
+        
     }
     
     public void adicionarPilula(int val) {
@@ -48,6 +48,7 @@ public class Semente Extends Parametro{
         if(sementesConvertidas >= 1) {
             qt_Convertida += sementesConvertidas;
             System.out.println(sementesConvertidas + " semente(s) adicionada.");
+            plantarsemente(qt_Convertida)
         } else {
             System.out.println("Nenhuma permissao de semente adicionada.");
         }
